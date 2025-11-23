@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#F7F7F7"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lifeline"
+        android:textColor="#E53935"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/appSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/connecting_lives"
+        android:textColor="#D32F2F"
+        android:textSize="14sp"
+        android:layout_marginBottom="40dp"/>
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:text="@string/log_in"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:backgroundTint="#B6A9A9"
+        android:elevation="2dp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/goToSignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/do_not_have_an_account"
+        android:textColor="#C62828"
+        android:paddingTop="12dp"/>
+
+    <Button
+        android:id="@+id/signupButton"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:text="@string/sign_up"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:backgroundTint="#B71C1C"
+        android:elevation="2dp"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>

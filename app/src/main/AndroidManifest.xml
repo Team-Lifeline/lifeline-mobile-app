@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.project_lifeline">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Project_Lifeline"
+        tools:ignore="ExtraText">
+        <activity
+            android:name=".Donor_detailsActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".Emergency_serviceActivity"
+            android:exported="true">
+        </activity> <!-- Launcher Activity -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Log In Again page -->
+        <activity
+            android:name=".Log_in_Again"
+            android:exported="true" /> <!-- Signup page -->
+        <activity
+            android:name=".SignupActivity"
+            android:exported="true" /> <!-- Dashboard page -->
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="true" /> <!-- Request details page -->
+        <activity
+            android:name=".Request_detailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Request_for_bloodActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".Emergency_serviceActivity"
+            android:exported="true"
+            tools:ignore="DuplicateActivity" />
+    </application>
+
+</manifest>
