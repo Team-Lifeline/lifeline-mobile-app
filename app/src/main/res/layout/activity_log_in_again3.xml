@@ -13,13 +13,6 @@
         android:orientation="vertical">
 
         <!-- ===== Toolbar / Back Button ===== -->
-        <ImageView
-            android:id="@+id/backButton"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/back"
-            android:contentDescription="@string/back2"
-            app:tint="#000000" />
 
         <!-- ===== App Title ===== -->
         <TextView

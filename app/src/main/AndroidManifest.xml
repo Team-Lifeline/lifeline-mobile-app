@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.project_lifeline">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,23 +15,37 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project_Lifeline"
         tools:ignore="ExtraText">
+        
         <activity
-            android:name=".Donor_detailsActivity"
+            android:name=".Donor_sign_up"
+            android:exported="true">
+        </activity>
+        
+        <activity
+            android:name=".Recipient_SignUp"
             android:exported="true">
         </activity>
         <activity
+            android:name=".Recipient_Dashboard"
+            android:exported="true"></activity>
+        <activity
+            android:name=".Donor_detailsActivity"
+            android:exported="true" />
+        <activity
             android:name=".Emergency_serviceActivity"
-            android:exported="true">
-        </activity> <!-- Launcher Activity -->
+            android:exported="true" />
+            
+        <!-- Launcher Activity: LoginActivity -->
         <activity
             android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- Log In Again page -->
+        </activity> 
+        
+        <!-- Log In Again page -->
         <activity
             android:name=".Log_in_Again"
             android:exported="true" /> <!-- Signup page -->
@@ -45,11 +61,18 @@
         <activity
             android:name=".Request_for_bloodActivity"
             android:exported="true" />
-
         <activity
-            android:name=".Emergency_serviceActivity"
-            android:exported="true"
-            tools:ignore="DuplicateActivity" />
+            android:name=".Request_for_plateletActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UserProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Hospital_infoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LogoutActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

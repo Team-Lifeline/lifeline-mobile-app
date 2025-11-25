@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F8F8F8"
@@ -38,7 +39,7 @@
 
         <!-- Submit Button -->
         <Button
-            android:id="@+id/Submit_Platelet_Btn"
+            android:id="@+id/Donor_Btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#F8F3F3"
@@ -52,7 +53,7 @@
 
         <!-- Submit Button -->
         <Button
-            android:id="@+id/Submit_Platelet_Btn"
+            android:id="@+id/recipient_Btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#D32F2F"
@@ -272,7 +273,7 @@
 
             <!-- Submit Button -->
             <Button
-                android:id="@+id/Submit_Platelet_Btn"
+                android:id="@+id/submit_Btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/submit_request1"
@@ -377,4 +378,5 @@
 
         </LinearLayout>
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

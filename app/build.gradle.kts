@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
@@ -39,6 +40,11 @@ dependencies {
     implementation(libs.credentials)
     implementation(libs.credentials.play.services.auth)
     implementation(libs.googleid)
+    
+    // Firebase dependencies
+    implementation(platform("com.google.firebase:firebase-bom:33.10.0")) // Using BOM is recommended
+    implementation(libs.firebase.auth)
+    implementation("com.google.firebase:firebase-firestore") // Adding Firestore for database
 
     // OkHttp dependency for networking
     implementation("com.squareup.okhttp3:okhttp:4.11.0")

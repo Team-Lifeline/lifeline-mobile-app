@@ -1,26 +1,42 @@
 package com.example.project_lifeline;
 
-import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class LogoutActivity extends AppCompatActivity {
 
-    @SuppressLint("MissingInflatedId")
+    Button btnCancel, btnLogout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_logout);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
+        // Initialize Buttons
+        btnCancel = findViewById(R.id.btnCancel);
+        btnLogout = findViewById(R.id.btnLogout);
+
+        // Cancel Button -> Go back to UserProfileActivity
+        if (btnCancel != null) {
+            btnCancel.setOnClickListener(v -> {
+                Intent intent = new Intent(LogoutActivity.this, UserProfileActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                startActivity(intent);
+                finish();
+            });
+        }
+
+        // Logout Button -> Go to LoginActivity (Login2)
+        if (btnLogout != null) {
+            btnLogout.setOnClickListener(v -> {
+                Intent intent = new Intent(LogoutActivity.this, LoginActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK); // Clear stack
+                startActivity(intent);
+                finish();
+            });
+        }
     }
 }

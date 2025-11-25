@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class Request_for_bloodActivity extends AppCompatActivity {
 
     EditText inputName, inputQuantity, inputPhone, inputUrgency, inputHospital, inputLocation;
-    Button submitRequestBtn;
+    Button submitRequestBtn, plateletBtn;
     ImageButton navHome, navRequest, navEmergency, navProfile;
 
     @SuppressLint("MissingInflatedId")
@@ -31,12 +31,19 @@ public class Request_for_bloodActivity extends AppCompatActivity {
         inputLocation = findViewById(R.id.inputLocation);
 
         submitRequestBtn = findViewById(R.id.submit_Btn);
+        plateletBtn = findViewById(R.id.recipient_Btn); // Initialize Platelet button
 
         // 🔹 Submit button click → for now just show a toast
         submitRequestBtn.setOnClickListener(v -> {
             Toast.makeText(this, "Request submitted!", Toast.LENGTH_SHORT).show();
             // Optional: send data to backend or open Request_detailsActivity
             Intent intent = new Intent(Request_for_bloodActivity.this, Request_detailsActivity.class);
+            startActivity(intent);
+        });
+
+        // 🔹 Platelet button click → Navigate to Request_for_plateletActivity
+        plateletBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(Request_for_bloodActivity.this, Request_for_plateletActivity.class);
             startActivity(intent);
         });
 
@@ -54,8 +61,8 @@ public class Request_for_bloodActivity extends AppCompatActivity {
         navRequest.setOnClickListener(v -> Toast.makeText(this, "Already on Request page", Toast.LENGTH_SHORT).show());
 
         navEmergency.setOnClickListener(v -> {
-            // Go to Emergency Service page
-            Toast.makeText(this, "Emergency clicked", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(Request_for_bloodActivity.this, Emergency_serviceActivity.class);
+            startActivity(intent);
         });
 
 

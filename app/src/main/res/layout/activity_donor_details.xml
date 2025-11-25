@@ -91,7 +91,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/blood_type_a_plus"
+                            android:text="@string/blood_type_o"
                             android:textColor="#D72823"
                             android:textSize="14sp" />
 
@@ -99,14 +99,14 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/gender_female"
-                            android:textColor="#757575"
+                            android:text="@string/gender_female2"
+                            android:textColor="#000000"
                             android:textSize="14sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/age_21"
+                            android:text="@string/age_21_2"
                             android:textColor="#757575"
                             android:textSize="14sp" />
                     </LinearLayout>
@@ -252,38 +252,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="10dp"
-            app:cardElevation="2dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="12dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    tools:ignore="UselessParent">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/donated_to_fatema"
-                        android:textColor="#000000"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/apollo_hospital"
-                        android:textColor="#757575"
-                        android:textSize="13sp" />
-                </LinearLayout>
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+            app:cardElevation="2dp"/>
     </LinearLayout>
 </ScrollView>

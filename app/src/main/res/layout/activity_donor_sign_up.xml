@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- App Logo Title -->
+        <TextView
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lifeline_sd"
+            android:textColor="#D90429"
+            android:textStyle="bold"
+            android:textSize="32sp"
+            android:layout_gravity="center" />
+
+        <TextView
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/join_our_community_save_a_life2"
+            android:layout_gravity="center"
+            android:paddingTop="4dp"
+            android:textSize="14sp"
+            android:textColor="#2D3748" />
+
+        <!-- Title -->
+        <TextView
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/how_would_you_like_to_join2"
+            android:layout_gravity="center"
+            android:paddingTop="20dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#2D3748" />
+
+        <!-- Toggle: Blood | Platelets -->
+        <LinearLayout
+            android:id="@+id/typeToggle"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="357dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:elevation="2dp"
+
+            android:orientation="horizontal"
+            android:padding="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/requestTitle">
+
+
+            <!-- Submit Button -->
+            <Button
+                android:id="@+id/Donor_Btn"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="152dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#D32F2F"
+                android:text="@string/i_am_a_donorSD"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <!-- Submit Button -->
+            <Button
+                android:id="@+id/recipient_Btn"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="149dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#F8F3F3"
+                android:paddingVertical="12dp"
+                android:text="@string/i_am_a_recipientSD"
+                android:textColor="#686666"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <!-- Full Name -->
+        <TextView
+            style="?android:attr/buttonBarButtonStyle"
+            android:text="@string/full_nameSD"
+            android:textSize="14sp"
+            android:paddingTop="20dp"
+            android:textStyle="bold"
+            android:textColor="#2D3748"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/inputFullName"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/enter_your_full_nameSD"
+            android:importantForAutofill="no"
+            android:padding="14dp"
+            android:textColorHint="#757575"
+            tools:ignore="VisualLintTextFieldSize" />
+
+        <!-- Email -->
+        <TextView
+            style="?android:attr/buttonBarButtonStyle"
+            android:text="@string/emailSD"
+            android:textSize="14sp"
+            android:paddingTop="14dp"
+            android:textStyle="bold"
+            android:textColor="#2D3748"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/inputEmail"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/you_example_comSD"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            android:padding="14dp"
+            android:textColorHint="#757575"
+            tools:ignore="VisualLintTextFieldSize" />
+
+        <!-- Blood Type -->
+        <TextView
+            style="?android:attr/buttonBarButtonStyle"
+            android:text="@string/blood_typeSD"
+            android:textSize="14sp"
+            android:paddingTop="14dp"
+            android:textStyle="bold"
+            android:textColor="#2D3748"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/spinnerBlood"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="14dp" />
+
+        <!-- Age -->
+        <TextView
+            style="?android:attr/buttonBarButtonStyle"
+            android:text="@string/ageSD"
+            android:textSize="14sp"
+            android:paddingTop="20dp"
+            android:textStyle="bold"
+            android:textColor="#2D3748"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/donor_age"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/enter_your_ageSD"
+            android:importantForAutofill="no"
+            android:padding="14dp"
+            android:textColorHint="#757575"
+            tools:ignore="VisualLintTextFieldSize" />
+
+        <!-- Gender -->
+        <TextView
+            style="?android:attr/buttonBarButtonStyle"
+            android:text="@string/genderSD"
+            android:textSize="14sp"
+            android:paddingTop="20dp"
+            android:textStyle="bold"
+            android:textColor="#2D3748"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/donor_gender"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/enter_your_genderSD"
+            android:importantForAutofill="no"
+            android:padding="14dp"
+            android:textColorHint="#757575"
+            tools:ignore="VisualLintTextFieldSize" />
+
+        <!-- Location -->
+        <TextView
+            style="?android:attr/buttonBarButtonStyle"
+            android:autofillHints=""
+            android:importantForAutofill="no"
+            android:text="@string/locationSD"
+            android:textSize="14sp"
+            android:paddingTop="14dp"
+            android:textStyle="bold"
+            android:textColor="#2D3748"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/inputLocation"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/select_your_city_regionSD"
+            android:paddingStart="40dp"
+            android:textColorHint="#757575"
+            tools:ignore="Autofill,RtlSymmetry,VisualLintTextFieldSize" />
+
+
+        <!-- Password -->
+        <TextView
+            style="?android:attr/buttonBarButtonStyle"
+            android:text="@string/create_passwordSD"
+            android:textSize="14sp"
+            android:paddingTop="14dp"
+            android:textStyle="bold"
+            android:textColor="#2D3748"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/inputPassword"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/enter_a_secure_passwordSD"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:padding="14dp"
+            android:textColorHint="#757575"
+            tools:ignore="VisualLintTextFieldSize" />
+
+        <!-- Create Account Button -->
+        <Button
+            android:id="@+id/btnCreateAccount"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/create_accountSD"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#D90429"
+            android:layout_marginTop="24dp"
+            tools:ignore="VisualLintButtonSize" />
+
+        <!-- Log In -->
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/already_have_an_account_log_inSD"
+            android:layout_marginTop="18dp"
+            android:textStyle="bold"
+            android:textColor="#2D3748"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+</ScrollView>

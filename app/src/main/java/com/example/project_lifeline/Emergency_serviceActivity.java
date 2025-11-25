@@ -8,17 +8,26 @@ import android.widget.ImageButton;
 
 public class Emergency_serviceActivity extends AppCompatActivity {
 
-    ImageButton navHome, navRequest, navEmergency, navProfile;
+    ImageButton navHome, navRequest, navEmergency, navProfile, detailsBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_emergency_service); // use your emergency XML name
+        setContentView(R.layout.activity_emergency_service); 
 
         navHome = findViewById(R.id.navHome);
         navRequest = findViewById(R.id.navRequest);
         navEmergency = findViewById(R.id.navEmergency);
         navProfile = findViewById(R.id.navProfile);
+        detailsBtn = findViewById(R.id.details);
+
+        // Details button → Hospital Info
+        if (detailsBtn != null) {
+            detailsBtn.setOnClickListener(v -> {
+                Intent intent = new Intent(Emergency_serviceActivity.this, Hospital_infoActivity.class);
+                startActivity(intent);
+            });
+        }
 
         // Home → Dashboard
         navHome.setOnClickListener(v -> {
@@ -26,21 +35,21 @@ public class Emergency_serviceActivity extends AppCompatActivity {
             finish();
         });
 
-        // Donate / Request → (replace TargetActivity with your real activity)
+        // Donate / Request → Request Page
         navRequest.setOnClickListener(v -> {
             Intent intent = new Intent(this, Request_for_bloodActivity.class);
             startActivity(intent);
             finish();
         });
 
-        // Emergency (current page) → do nothing or refresh
+        // Emergency (current page) → do nothing
         navEmergency.setOnClickListener(v -> {
-            // already here, so no navigation
+            // already here
         });
 
-        // Profile → (replace ProfileActivity with your real activity)
+        // Profile → User Profile
         navProfile.setOnClickListener(v -> {
-            Intent intent = new Intent(this, User_profileActivity.class);
+            Intent intent = new Intent(this, UserProfileActivity.class);
             startActivity(intent);
             finish();
         });

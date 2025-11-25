@@ -24,15 +24,15 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        // 🔹 When "Signup" is clicked → go to SignupActivity
+        // 🔹 When "Signup" is clicked → go to Donor_sign_up
         signupButton.setOnClickListener(v -> {
-            Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
+            Intent intent = new Intent(LoginActivity.this, Donor_sign_up.class);
             startActivity(intent);
         });
 
-        // 🔹 Also make "Don't have an account?" text go to SignupActivity
+        // 🔹 Also make "Don't have an account?" text go to Donor_sign_up
         goToSignup.setOnClickListener(v -> {
-            Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
+            Intent intent = new Intent(LoginActivity.this, Donor_sign_up.class);
             startActivity(intent);
         });
     }

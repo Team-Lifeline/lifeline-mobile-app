@@ -1,26 +1,40 @@
 package com.example.project_lifeline;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class Request_for_plateletActivity extends AppCompatActivity {
+
+    Button bloodBtn;
+    ImageButton navHome;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_request_for_platelet);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        bloodBtn = findViewById(R.id.Donor_Btn);
+        navHome = findViewById(R.id.navHome);
+
+        // Navigate to Request_for_bloodActivity when Blood button is clicked
+        bloodBtn.setOnClickListener(v -> {
+             Intent intent = new Intent(Request_for_plateletActivity.this, Request_for_bloodActivity.class);
+             startActivity(intent);
         });
+
+        // Navigate to DashboardActivity when Home button is clicked
+        navHome.setOnClickListener(v -> {
+            Intent intent = new Intent(Request_for_plateletActivity.this, DashboardActivity.class);
+            startActivity(intent);
+        });
+
+        Toast.makeText(this, "Platelet Request", Toast.LENGTH_SHORT).show();
     }
 }
