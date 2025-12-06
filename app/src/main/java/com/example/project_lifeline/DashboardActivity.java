@@ -29,7 +29,7 @@ public class DashboardActivity extends AppCompatActivity {
 
             // Initialize other elements
             btnViewRequest = findViewById(R.id.btnViewRequest);
-            profileIcon = findViewById(R.id.profileIcon);
+
 
             // Safety check for null views (in case XML is mismatching)
             if (navHome == null || navRequest == null || navEmergency == null || navProfile == null) {
